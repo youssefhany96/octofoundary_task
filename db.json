@@ -1,0 +1,49 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "user_name": "Kathryn Murphy",
+      "user_phone": "(212) 555-1234",
+      "user_email": "tanya.hill@example.com",
+      "user_date": "2018-01-01",
+      "user_country": "Saudi Arabia",
+      "user_company": "L' Oréal"
+    },
+    {
+      "id": 2,
+      "user_name": "Wade Warren",
+      "user_phone": "(212) 555-1235",
+      "user_email": "dolores.chambers@example.com",
+      "user_date": "2017-24-09",
+      "user_country": "Serbia",
+      "user_company": "eBay"
+    },
+    {
+      "id": 3,
+      "user_name": "Devon Lane",
+      "user_phone": "(212) 555-1236",
+      "user_email": "sana.cruz@example.com",
+      "user_date": "2015-02-09",
+      "user_country": "Russian Federation",
+      "user_company": "Gillette"
+    },
+    {
+      "id": 4,
+      "user_name": "Albert Flores",
+      "user_phone": "(212) 555-1237",
+      "user_email": "deanna.curtis@example.com",
+      "user_date": "2014-11-16",
+      "user_country": "Poland",
+      "user_company": "Louis Vuitton"
+    },
+    {
+      "id": 5,
+      "user_name": "Jerome Bell",
+      "user_phone": "(212) 555-1238",
+      "user_email": "michelle.rivera@example.com",
+      "user_date": "2017-10-31",
+      "user_country": "Poland",
+      "user_company": "Facebook"
+    }
+  ]
+}
