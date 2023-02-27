@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, TextField } from "@mui/material";
 import moment from "moment";
 import Select from "@mui/material/Select";
@@ -8,7 +8,7 @@ import MenuItem from "@mui/material/MenuItem";
 import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import FilterListIcon from '@mui/icons-material/FilterList';
+import FilterListIcon from "@mui/icons-material/FilterList";
 
 import Divider from "./Divider";
 
@@ -16,8 +16,17 @@ function Filter() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
-  const [country, setCountry] = useState("All");
+  const [country, setCountry] = useState([]);
+  const [selectedCountry, setSelectedCountry] = useState("");
   const [date, setDate] = useState(moment().format("MM/DD/YYYY"));
+
+  useEffect(() => {
+    fetch("https://restcountries.com/v3.1/all")
+      .then((res) => res.json())
+      .then((data) => {
+        setCountry(data);
+      });
+  }, []);
 
   return (
     <div className="filter">
@@ -60,42 +69,51 @@ function Filter() {
 
           <Divider />
           <FormControl variant="standard" sx={{ m: 1, minWidth: 200 }}>
-            <InputLabel htmlFor="country-native-simple">Country</InputLabel>
+            <InputLabel id="country-native-simple">Country</InputLabel>
             <Select
-              labelId="demo-simple-select-standard-label"
-              native
-              value={country}
+              labelId="country-native-simple"
+              value={selectedCountry}
               label="Country"
               onChange={(e) => {
-                setCountry(e.target.value);
-              }}
-              inputProps={{
-                name: "country",
-                id: "country-native-simple",
+                setSelectedCountry(e.target.value);
               }}
             >
-              <MenuItem value="All">All</MenuItem>
-              <MenuItem value="USA">USA</MenuItem>
-              <MenuItem value="Canada">Canada</MenuItem>
-              <MenuItem value="Mexico">Mexico</MenuItem>
+              {country.map((data) => (
+                <MenuItem key={data.cca3} value={data.cca3}>
+                  {data.name.common}
+                </MenuItem>
+              ))}
             </Select>
           </FormControl>
           <Divider />
           <LocalizationProvider dateAdapter={AdapterDayjs}>
             <DesktopDatePicker
               label="Date"
-              inputFormat="MM/DD/YYYY"
+              inputFormat="YYYY/MM/DD"
               value={date}
               onChange={(newValue) => {
                 setDate(newValue);
               }}
               renderInput={(params) => (
-                <TextField variant="standard" {...params} />
+                <TextField variant="standard" {...params} sx={{width: '88%'}}  />
               )}
             />
           </LocalizationProvider>
         </div>
-        <Button variant="contained" sx={{ m: 1 }} startIcon={<FilterListIcon />}>
+        <Button
+          variant="contained"
+          sx={{ m: 1 }}
+          startIcon={<FilterListIcon />}
+          onClick={() => {
+            fetch(
+              `http://localhost:3000/employees?email=${email}&name=${name}&phone=${phone}&country=${selectedCountry}&date=${date}`
+            )
+              .then((res) => res.json())
+              .then((data) => {
+                console.log(data);
+              });
+          }}
+        >
           Filter
         </Button>
       </form>
