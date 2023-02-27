@@ -1,0 +1,139 @@
+.App {
+  text-align: center;
+  display: flex;
+
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+
+}
+
+.table__title {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.table td, .table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.table__search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.table tr:nth-child(even){background-color: #f2f2f2;}
+
+/* .table tr:hover {background-color: #ddd;} */
+
+.table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.filter {
+  margin: 20px;
+}
+
+.filter__item {
+  margin-bottom: 20px;
+}
+
+/* .filter {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  margin: 10px;
+
+} */
+
+/* .filter__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 100%;
+} */
+
+.search {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+} */
+
+input {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: #ddd;
+  padding: 10px;
+}
+input:focus {
+  border-color: blue;
+  /* outline: 1px dotted #000 */
+}
+
+.divider {
+  width: 100%;
+  /* height: 1px; */
+  background-color: #ddd;
+  margin: 10px 0;
+}
