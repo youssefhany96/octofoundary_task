@@ -1,21 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../App.css";
 
 import useSortableData from "../hooks/useSortableData";
 
-const API_URL = "http://localhost:3000/employees";
-
-function Table() {
-  const [users, setUsers] = useState([]);
+function Table({ users }) {
   const [query, setQuery] = useState("");
 
   const { items, requestSort, sortConfig } = useSortableData(users);
-
-  const fetchEmployees = async () => {
-    const response = await fetch(API_URL);
-    const data = await response.json();
-    setUsers(data);
-  };
 
   const search = (data) => {
     return data.filter((item) =>
@@ -23,14 +14,10 @@ function Table() {
     );
   };
 
-  useEffect(() => {
-    fetchEmployees();
-  }, []);
-
   return (
     <div>
       <table className="table">
-        <div className="table__search">
+        <tr className="table__search">
           <h3 className="table__title">Employees</h3>
           <input
             type="text"
@@ -40,7 +27,7 @@ function Table() {
               setQuery(e.target.value);
             }}
           />
-        </div>
+        </tr>
         {/* <tr>
           <h3 className="table__title">Employees</h3>
           <input

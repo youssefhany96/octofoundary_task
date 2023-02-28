@@ -14,7 +14,7 @@
       "user_name": "Wade Warren",
       "user_phone": "(212) 555-1235",
       "user_email": "dolores.chambers@example.com",
-      "user_date": "2017-24-09",
+      "user_date": "2017-09-24",
       "user_country": "Serbia",
       "user_company": "eBay"
     },
@@ -62,6 +62,33 @@
       "user_date": "2018-02-28",
       "user_country": "Monaco",
       "user_company": "Gillette"
+    },
+    {
+      "id": 8,
+      "user_name": "Jane Smith",
+      "user_phone": "(212) 555-1241",
+      "user_email": "georgia.young@example.com",
+      "user_date": "2013-03-13",
+      "user_country": "United States",
+      "user_company": "Starbucks"
+    },
+    {
+      "id": 9,
+      "user_name": "Floyd Miles",
+      "user_phone": "(212) 555-1242",
+      "user_email": "bill.sanders@example.com",
+      "user_date": "2015-05-20",
+      "user_country": "Greece",
+      "user_company": "Louis Vuitton"
+    },
+    {
+      "id": 10,
+      "user_name": "Arlene Mccoy",
+      "user_phone": "(212) 555-1243",
+      "user_email": "jackson.graham@example.com",
+      "user_date": "2013-09-09",
+      "user_country": "Haiti",
+      "user_company": "Nintendo"
     }
   ]
 }
