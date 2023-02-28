@@ -8,10 +8,13 @@ import MenuItem from "@mui/material/MenuItem";
 function CountrySelect({ selectedCountry, setSelectedCountry }) {
   const [country, setCountry] = useState([]);
 
+  const fetchCountries = async () => {
+    const { data } = await axios.get("https://restcountries.com/v3.1/all");
+    setCountry(data);
+  };
+
   useEffect(() => {
-    axios.get("https://restcountries.com/v3.1/all").then((res) => {
-      setCountry(res.data);
-    });
+    fetchCountries();
   }, []);
 
   return (

@@ -6,7 +6,7 @@
       "user_phone": "(212) 555-1234",
       "user_email": "tanya.hill@example.com",
       "user_date": "2018-01-01",
-      "user_country": "Saudi Arabia",
+      "user_country": "SAU",
       "user_company": "L' Oréal"
     },
     {
@@ -15,7 +15,7 @@
       "user_phone": "(212) 555-1235",
       "user_email": "dolores.chambers@example.com",
       "user_date": "2017-09-24",
-      "user_country": "Serbia",
+      "user_country": "SRB",
       "user_company": "eBay"
     },
     {
@@ -24,7 +24,7 @@
       "user_phone": "(212) 555-1236",
       "user_email": "sana.cruz@example.com",
       "user_date": "2015-02-09",
-      "user_country": "Russian Federation",
+      "user_country": "RUS",
       "user_company": "Gillette"
     },
     {
@@ -33,7 +33,7 @@
       "user_phone": "(212) 555-1237",
       "user_email": "deanna.curtis@example.com",
       "user_date": "2014-11-16",
-      "user_country": "Poland",
+      "user_country": "POL",
       "user_company": "Louis Vuitton"
     },
     {
@@ -42,7 +42,7 @@
       "user_phone": "(212) 555-1238",
       "user_email": "michelle.rivera@example.com",
       "user_date": "2017-10-31",
-      "user_country": "Poland",
+      "user_country": "POL",
       "user_company": "Facebook"
     },
     {
@@ -51,7 +51,7 @@
       "user_phone": "(212) 555-1239",
       "user_email": "debra.holt@examole.com",
       "user_date": "2018-12-02",
-      "user_country": "Pakistan",
+      "user_country": "PAK",
       "user_company": "MasterCard"
     },
     {
@@ -60,7 +60,7 @@
       "user_phone": "(212) 555-1240",
       "user_email": "leroy.mccoy@example.com",
       "user_date": "2018-02-28",
-      "user_country": "Monaco",
+      "user_country": "MCO",
       "user_company": "Gillette"
     },
     {
@@ -69,7 +69,7 @@
       "user_phone": "(212) 555-1241",
       "user_email": "georgia.young@example.com",
       "user_date": "2013-03-13",
-      "user_country": "United States",
+      "user_country": "USA",
       "user_company": "Starbucks"
     },
     {
@@ -78,7 +78,7 @@
       "user_phone": "(212) 555-1242",
       "user_email": "bill.sanders@example.com",
       "user_date": "2015-05-20",
-      "user_country": "Greece",
+      "user_country": "GRC",
       "user_company": "Louis Vuitton"
     },
     {
@@ -87,7 +87,7 @@
       "user_phone": "(212) 555-1243",
       "user_email": "jackson.graham@example.com",
       "user_date": "2013-09-09",
-      "user_country": "Haiti",
+      "user_country": "HTI",
       "user_company": "Nintendo"
     }
   ]

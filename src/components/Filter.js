@@ -1,7 +1,7 @@
+import axios from "axios";
 import React, { useState } from "react";
 import { Button, TextField } from "@mui/material";
 import dayjs from "dayjs";
-import axios from "axios";
 
 import CountrySelect from "./CountrySelect";
 import DateInput from "./DateInput";
@@ -17,7 +17,7 @@ function Filter({ setUsers }) {
   const [company, setCompany] = useState("");
   const [isVisible, setIsVisible] = useState(false);
 
-  const filterEmployees = () => {
+  const filterEmployees = async () => {
     const query = {
       ...(email && { user_email: email }),
       ...(name && { user_name: name }),
@@ -27,11 +27,10 @@ function Filter({ setUsers }) {
       ...(date && { user_date: dayjs(date).format("YYYY-MM-DD") }),
     };
 
-    axios
-      .get("http://localhost:3000/employees", { params: query })
-      .then((res) => {
-        setUsers(res.data);
-      });
+    const { data } = await axios.get("http://localhost:3000/employees", {
+      params: query,
+    });
+    setUsers(data);
   };
 
   return (

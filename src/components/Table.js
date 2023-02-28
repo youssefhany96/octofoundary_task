@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "../App.css";
 
+import "../App.css";
 import useSortableData from "../hooks/useSortableData";
 
 function Table({ users }) {
@@ -15,30 +15,20 @@ function Table({ users }) {
   };
 
   return (
-    <div>
+    <div className="table__container">
       <table className="table">
-        <tr className="table__search">
-          <h3 className="table__title">Employees</h3>
-          <input
-            type="text"
-            placeholder="Search"
-            className="search"
-            onChange={(e) => {
-              setQuery(e.target.value);
-            }}
-          />
-        </tr>
-        {/* <tr>
-          <h3 className="table__title">Employees</h3>
-          <input
-            type="text"
-            placeholder="Search"
-            className="search"
-            onChange={(e) => {
-              setQuery(e.target.value);
-            }}
-          />
-        </tr> */}
+        <td colSpan={2} className="table__title">
+          Employees
+        </td>
+        <input
+          type="text"
+          placeholder="Search by name"
+          className="search"
+          onChange={(e) => {
+            setQuery(e.target.value);
+          }}
+        />
+
         <tr className="table__header">
           <th onClick={() => requestSort("user_name")}>
             Name

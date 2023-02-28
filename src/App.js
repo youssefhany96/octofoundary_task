@@ -11,8 +11,8 @@ function App() {
   const [users, setUsers] = useState([]);
 
   const fetchEmployees = async () => {
-    const response = await axios.get(API_URL);
-    setUsers(response.data);
+    const { data } = await axios.get(API_URL);
+    setUsers(data);
   };
 
   useEffect(() => {
